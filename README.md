@@ -28,10 +28,21 @@ In this project you will create a login page and request a token from the server
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Explain what a token is used for.
-- [ ] What steps can you take in your web apps to keep your data secure?
-- [ ] Describe how web servers work.
-- [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+- [x] Explain what a token is used for.
+
+A token is used to verify a that a user has logged in. When they send a post request to the login endpoint, it returns a token which may be saved to local storage (or elsewhere). Now other components can verify that they are logged in to display private routes. 
+
+- [x] What steps can you take in your web apps to keep your data secure?
+
+Use private routes for components which should only be displayed to logged in users. Don't store usernames and passwords but instead store a token once they have logged in, and use that to verify their identity.
+
+- [x] Describe how web servers work.
+
+Web servers take http requests from other computers and return responses which may include statuses as well as payloads, such as data to return, messages, etc. 
+
+- [x] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+CRUD stands for Create, Read, Update, Delete, corresponding to POST, GET, PUT, DELETE requests. 
 
 
 ## Project Set Up
@@ -65,16 +76,16 @@ The MVP of this project will be broken up between 2 stages. Follow each step.
 
 Build a login form to authenticate your users.
 
-- [ ] Construct an AXIOS request to retrieve a token from the server. You'll use this token to interact with the API
-- [ ] Save the token to localStorage
-- [ ] Build a `axiosWithAuth` module to create an instance of axios with the authentication header
-- [ ] Build a `PrivateRoute` component and use it to protect a route that renders the `BubblesPage` component
+- [x] Construct an AXIOS request to retrieve a token from the server. You'll use this token to interact with the API
+- [x] Save the token to localStorage
+- [x] Build a `axiosWithAuth` module to create an instance of axios with the authentication header
+- [x] Build a `PrivateRoute` component and use it to protect a route that renders the `BubblesPage` component
 
 ### Stage 2 - Consuming the API
 
-- [ ] When `BubblePages` renders, make a GET request to fetch the color data for your bubbles.
-- [ ] In `ColorList.js`, complete the `saveEdit` and `deleteColor` functions to make AJAX requests to the API to edit/delete data
-- [ ] Watch and enjoy as your app responds to updates in the data. Check out `Bubbles.js` to see how this is built.
+- [x] When `BubblePages` renders, make a GET request to fetch the color data for your bubbles.
+- [x] In `ColorList.js`, complete the `saveEdit` and `deleteColor` functions to make AJAX requests to the API to edit/delete data
+- [x] Watch and enjoy as your app responds to updates in the data. Check out `Bubbles.js` to see how this is built.
 
 ### API Documentation
 
@@ -88,7 +99,7 @@ Build a login form to authenticate your users.
 
 **HTTP/Axios Stretch Problems**
 
-- [ ] Build a form at the bottom of `ColorList.js` to add new colors to the colors data
+- [x] Build a form at the bottom of `ColorList.js` to add new colors to the colors data
 
 **Data Visualization**
 
